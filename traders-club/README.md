@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `Rodando o servidor local`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: Configurações iniciais do projeto.!**
 
 Antes de qualquer coisa precisaremos instalar as dependencias do projeto, fazendo isto, estaremos aptos a rodar o seridor localhost.
 Entre na pasta do projeto e roda o comnado YARN
