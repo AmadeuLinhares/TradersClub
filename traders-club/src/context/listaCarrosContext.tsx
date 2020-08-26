@@ -19,10 +19,6 @@ interface ListagemInterface {
   listaPequisaCarrinho(data: CarList[]): void;
   observadorCampo(check: boolean): void;
   campoPesquisa: boolean;
-
-  // editarInfoCarro(data: CarList): void;
-  // editarCadastro: boolean;
-  // isCadastroEditar(check: boolean): void;
 }
 
 export const ListaCarosContext = createContext<ListagemInterface>(
@@ -38,18 +34,23 @@ export const ListaCarrosProvider: React.FC = ({ children }) => {
   const listagemCarros = useCallback(async () => {
     const { data } = await Api.get('/cars');
     setListaCarros(data);
-    console.log('Resposta API', data);
   }, []);
 
-  const adicionarCarrinho = useCallback((data: CarList) => {
+  /**
+   * funcoes que seriam usadas para deletar e editar e adicionar do carro
+   *
+   *
+   * const adicionarCarrinho = useCallback((data: CarList) => {
     console.log('Adicionando novo carrinho');
   }, []);
   const editarInfoCarro = useCallback((data: CarList) => {
-    console.log('Adicionando novo carrinho');
+    console.log('Editar carrinho');
   }, []);
   const deletarCarrinho = useCallback((data: CarList) => {
-    console.log('Adicionando novo carrinho');
-  }, []);
+    console.log('Deletar carrinho');
+      }, []);
+   *
+   */
 
   const listaPequisaCarrinho = useCallback(data => {
     console.log('Objeto dentro do context => ', data);
@@ -58,10 +59,6 @@ export const ListaCarrosProvider: React.FC = ({ children }) => {
   const observadorCampo = useCallback(check => {
     setDirty(check);
   }, []);
-
-  // const isCadastroEditar = useCallback(check => {
-  //   setEditarCadastroState(check);
-  // }, []);
 
   useEffect(() => {
     listagemCarros();
@@ -75,9 +72,6 @@ export const ListaCarrosProvider: React.FC = ({ children }) => {
         listaPequisaCarrinho,
         observadorCampo,
         campoPesquisa: dirty,
-        // editarInfoCarro,
-        // isCadastroEditar,
-        // editarCadastro: editarCadastroState,
       }}
     >
       {children}

@@ -27,7 +27,6 @@ const MarcasProvides: React.FC = ({ children }) => {
       label: m.name,
     }));
     setListMarcas(dataFormatada);
-    console.log('RESPONSE API MARCAS => ', data);
   }, []);
 
   useEffect(() => {

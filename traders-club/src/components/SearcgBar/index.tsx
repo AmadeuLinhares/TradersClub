@@ -29,7 +29,6 @@ const SerachBar: React.FC = () => {
             .toLocaleLowerCase()
             .indexOf(e.target.value.toLocaleLowerCase()) > -1,
       );
-      console.log(array);
       listaPequisaCarrinho(array);
     },
     [dataCar],
