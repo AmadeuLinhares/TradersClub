@@ -4,6 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `Rodando o servidor local`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+Antes de qualquer coisa precisaremos instalar as dependencias do projeto, fazendo isto, estaremos aptos a rodar o seridor localhost.
+Entre na pasta do projeto e roda o comnado YARN
+Para subir o serviço que fornece a api, rode o comando json-server server.json -p 3333 -w
+Para rodarmos o projeto, basta digitar yarn start, e o mesmo irá subir na porta 3000 da sua maquina.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
